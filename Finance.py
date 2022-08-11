@@ -81,4 +81,4 @@ stocks=['ANG.JO',
         'WHL.JO',]
 
 for i in stocks:
-    stock(i)
+    sdata(i)
