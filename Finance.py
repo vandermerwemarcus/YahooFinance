@@ -1,7 +1,7 @@
 #https://analyzingalpha.com/yfinance-python
 import yfinance as yf
 import streamlit as st
-msft = yf.Ticker("CFR.JO")
+msft = yf.Ticker("SHP.JO")
 info = msft.info
 ROE = info['returnOnEquity']
 PE = info['trailingPE']
