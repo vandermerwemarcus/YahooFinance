@@ -14,7 +14,6 @@ def sdata(tic):
   EPS = info['trailingEps']
   st.write('Trailing PE:',PE)
   st.write('PEG:',PEG)
-  st.write('Trailing PEG:',TPEG)
   st.write('EPS:',EPS)
   st.write('ROE:',ROE,'%')
   st.write('Payout ratio:',K)
