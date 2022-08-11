@@ -9,8 +9,8 @@ K = info['payoutRatio']
 RR = 1-K
 g = 100*ROE*RR
 PEG = PE/g
-EPS = info.['trailingEps']
-TPEG = info.['trailingPegRatio']
+EPS = info['trailingEps']
+TPEG = info['trailingPegRatio']
 st.write('Trailing PE:',PE)
 st.write('PEG:',PEG)
 st.write('Trailing PEG:',TPEG)
