@@ -4,7 +4,7 @@ import streamlit as st
 msft = yf.Ticker("SHP.JO")
 info = msft.info
 ROE = info['returnOnEquity']
-PE = info['trailingPE']
+PE = round(info['trailingPE'],2)
 K = info['payoutRatio']
 RR = 1-K
 g = 100*ROE*RR
