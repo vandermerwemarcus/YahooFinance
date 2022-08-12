@@ -12,18 +12,22 @@ def sdata(tic):
   g = round(ROE*RR,2)
   PEG = round(PE/g,2)
   EPS = info['trailingEps']
+  PP = EPS * 16
   st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
   st.write('Trailing PE:',PE)
   st.write('PEG:',PEG)
+  st.write('Calculated Price:',PP)
   st.write('EPS:',EPS)
   st.write('ROE:',ROE,'%')
   st.write('Payout ratio:',K)
   st.write('Retention Rate:',RR)
   st.write('Growth Rate:',g,'%')
-  #st.write(info)
+  st.write(info)
   #st.write(info.keys())
 
+sdata('SHP.JO')
+'''
 stocks=['ANG.JO',
         'ACL.JO',
         'AEG.JO',
@@ -81,3 +85,4 @@ stocks=['ANG.JO',
 
 for i in stocks:
     sdata(i)
+'''
