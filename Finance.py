@@ -12,7 +12,7 @@ def sdata(tic):
   g = round(ROE*RR,2)
   PEG = round(PE/g,2)
   EPS = info['trailingEps']
-  PP = EPS * 16
+  PP = EPS * 20
   LP = info['previousClose']
   st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
@@ -28,7 +28,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('MRP.JO')
+sdata('WHL.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
