@@ -14,7 +14,7 @@ def sdata(tic):
   PEG = round(PE/g,2)
   EPS = info['trailingEps']
   PP = EPS * 20
-  LP = info['previousClose']
+  LP = info['previousClose']/100
   st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
   st.write('Trailing PE:',PE)
