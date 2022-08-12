@@ -7,6 +7,7 @@ def sdata(tic):
   info = msft.info
   ROE = round(100*info['returnOnEquity'],2)
   PE = round(info['trailingPE'],2)
+  FPE = info['forwardEps']
   K = round(info['payoutRatio'],2)
   RR = round(1-K,2)
   g = round(ROE*RR,2)
@@ -17,6 +18,7 @@ def sdata(tic):
   st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
   st.write('Trailing PE:',PE)
+  st.write('Forward EPS',FPE)
   st.write('PEG:',PEG)
   st.write('Last closing price:',LP)
   st.write('Calculated Price:',PP)
@@ -28,7 +30,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('WHL.JO')
+sdata('APN.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
