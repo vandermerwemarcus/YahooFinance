@@ -12,12 +12,6 @@ def sdata(tic):
     ROE = round(100*info['returnOnEquity'],2)
   except Exception:
     ROE = 0
-    
-  try:
-    PE = round(info['trailingPE'],2)
-    st.write('PE...',PE)
-  except Exception:
-    PE = 0
   
   try:
     FPE = info['forwardEps']
@@ -48,7 +42,12 @@ def sdata(tic):
     ER = info['enterpriseToRevenue']
   except Exception:
     ER = 0
-  
+    
+  try:
+    PE = LP/EPS
+  except Exception:
+    PE = null
+    
   RR = round(1-K,2)
   g = round(ROE*RR,2)
   
@@ -56,6 +55,8 @@ def sdata(tic):
     PEG = round(PE/g,2)
   except ZeroDivisionError:
     PEG = 0
+  
+
     
   PP = round(EPS * 20)
 
