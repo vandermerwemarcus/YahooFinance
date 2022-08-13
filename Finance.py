@@ -34,7 +34,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('NED.JO')
+sdata('SBK.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
