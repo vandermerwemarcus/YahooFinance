@@ -34,7 +34,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('MRP.JO')
+sdata('PIK.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
@@ -66,6 +66,7 @@ stocks=['ANG.JO',
         'MNP.JO',
         'MRF.JO',
         'MSM.JO',
+        'MRP.JO',
         'MTN.JO',
         'NED.JO',
         'NPK.JO',
