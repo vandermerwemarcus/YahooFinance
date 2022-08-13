@@ -20,32 +20,32 @@ def sdata(tic):
   
   try:
     FPE = info['forwardEps']
-  except Keyerror:
+  except Exception:
     FPE = 0
     
   try:
     K = round(info['payoutRatio'],2)
-  except Keyerror:
+  except Exception:
     K = 0
   
   try:
     EPS = info['trailingEps']
-  except Keyerror:
+  except Exception:
     EPS = 0
   
   try:
     LP = info['previousClose']/100
-  except Keyerror:
+  except Exception:
     LP = 0
     
   try:
     EV = info['enterpriseToEbitda']
-  except Keyerror:
+  except Exception:
     EV = 0
   
   try:
     ER = info['enterpriseToRevenue']
-  except Keyerror:
+  except Exception:
     ER = 0
   
   RR = round(1-K,2)
