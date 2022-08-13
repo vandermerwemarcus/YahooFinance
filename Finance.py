@@ -7,24 +7,52 @@ def sdata(tic):
   dic = dict();
   msft = yf.Ticker(tic)
   info = msft.info
+  
   try:
     ROE = round(100*info['returnOnEquity'],2)
   except Keyerror:
     ROE = 0
+    
   try:
     PE = round(info['trailingPE'],2)
   except Keyerror:
     PE = 0
-  FPE = info['forwardEps']
-  K = round(info['payoutRatio'],2)
+  
+  try:
+    FPE = info['forwardEps']
+  except Keyerror:
+    FPE = 0
+    
+  try:
+    K = round(info['payoutRatio'],2)
+  except Keyerror:
+    K = 0
+  
+  try:
+    EPS = info['trailingEps']
+  except Keyerror:
+    EPS = 0
+  
+  try:
+    LP = info['previousClose']/100
+  except Keyerror:
+    LP = 0
+    
+  try:
+    EV = info['enterpriseToEbitda']
+  except Keyerror:
+    EV = 0
+  
+  try:
+    ER = info['enterpriseToRevenue']
+  except Keyerror:
+    ER = 0
+  
   RR = round(1-K,2)
   g = round(ROE*RR,2)
   PEG = round(PE/g,2)
-  EPS = info['trailingEps']
   PP = round(EPS * 20)
-  LP = info['previousClose']/100
-  EV = info['enterpriseToEbitda']
-  ER = info['enterpriseToRevenue']
+
   #st.write('Name:',info['shortName'])
   #st.write('Ticker:',info['symbol'])
   #st.write('Last closing price:',LP)
