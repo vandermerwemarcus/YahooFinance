@@ -7,7 +7,10 @@ def sdata(tic):
   dic = dict();
   msft = yf.Ticker(tic)
   info = msft.info
-  ROE = round(100*info['returnOnEquity'],2)
+  try:
+    ROE = round(100*info['returnOnEquity'],2)
+  except Keyerror:
+    ROE = null 
   PE = round(info['trailingPE'],2)
   FPE = info['forwardEps']
   K = round(info['payoutRatio'],2)
