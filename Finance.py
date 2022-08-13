@@ -21,7 +21,7 @@ def sdata(tic):
   st.write('Name:',info['shortName'])
   st.write('Trailing PE:',PE)
   st.write('EV/EBITDA:',EV)
-  st.write('Enterprize to Revenue:',ER)
+  st.write('EV/Revenue:',ER)
   st.write('Forward EPS',FPE)
   st.write('PEG:',PEG)
   st.write('Last closing price:',LP)
