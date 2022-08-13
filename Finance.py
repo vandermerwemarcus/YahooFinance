@@ -30,7 +30,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('BAT.JO')
+sdata('SHP.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
