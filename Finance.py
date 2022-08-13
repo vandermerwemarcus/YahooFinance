@@ -17,17 +17,18 @@ def sdata(tic):
   LP = info['previousClose']/100
   EV = info['enterpriseToEbitda']
   ER = info['enterpriseToRevenue']
-  st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
-  st.write('Trailing PE:',PE)
-  st.write('EV/EBITDA:',EV)
-  st.write('EV/Revenue:',ER)
-  st.write('Forward EPS',FPE)
-  st.write('PEG:',PEG)
+  st.write('Ticker:',info['symbol'])
+  
   st.write('Last closing price:',LP)
   st.write('Calculated Price:',PP)
   st.write('EPS:',EPS)
+  st.write('Forward EPS',FPE)
   st.write('ROE:',ROE,'%')
+  st.write('Trailing PE:',PE)
+  st.write('PEG:',PEG)
+  st.write('EV/EBITDA:',EV)
+  st.write('EV/Revenue:',ER)
   st.write('Payout ratio:',K)
   st.write('Retention Rate:',RR)
   st.write('Growth Rate:',g,'%')
