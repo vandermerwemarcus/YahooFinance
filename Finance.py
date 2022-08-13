@@ -102,4 +102,4 @@ stocks=['ANG.JO',
 
 for i in stocks:
     f = sdata(i)
-    print(f)
+    st.write(f)
