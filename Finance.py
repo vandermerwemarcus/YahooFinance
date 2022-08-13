@@ -4,6 +4,7 @@ import streamlit as st
 import pandas as pd
 matrix = pd.DataFrame(columns=[])
 def sdata(tic):
+  dic = dict();
   msft = yf.Ticker(tic)
   info = msft.info
   ROE = round(100*info['returnOnEquity'],2)
@@ -18,25 +19,30 @@ def sdata(tic):
   LP = info['previousClose']/100
   EV = info['enterpriseToEbitda']
   ER = info['enterpriseToRevenue']
-  st.write('Name:',info['shortName'])
-  st.write('Ticker:',info['symbol'])
-  st.write('Last closing price:',LP)
-  st.write('Calculated Price:',PP)
-  st.write('EPS:',EPS)
-  st.write('Forward EPS',FPE)
-  st.write('ROE:',ROE,'%')
-  st.write('Trailing PE:',PE)
-  st.write('PEG:',PEG)
-  st.write('EV/EBITDA:',EV)
-  st.write('EV/Revenue:',ER)
-  st.write('Payout ratio:',K)
-  st.write('Retention Rate:',RR)
-  st.write('Growth Rate:',g,'%')
-  st.write(info)
+  #st.write('Name:',info['shortName'])
+  #st.write('Ticker:',info['symbol'])
+  #st.write('Last closing price:',LP)
+  #st.write('Calculated Price:',PP)
+  #st.write('EPS:',EPS)
+  #st.write('Forward EPS',FPE)
+  #st.write('ROE:',ROE,'%')
+  #st.write('Trailing PE:',PE)
+  #st.write('PEG:',PEG)
+  #st.write('EV/EBITDA:',EV)
+  #st.write('EV/Revenue:',ER)
+  #st.write('Payout ratio:',K)
+  #st.write('Retention Rate:',RR)
+  #st.write('Growth Rate:',g,'%')
+  #st.write(info)
+  dic['PE'] = PE
+  dic['LP'] = LP
+  dic['ROE'] = ROE
+  dic['Name'] = info['shortName']
+  return dic
   #st.write(info.keys())
 
 sdata('BVT.JO')
-'''
+
 stocks=['ANG.JO',
         'ACL.JO',
         'AEG.JO',
@@ -95,5 +101,5 @@ stocks=['ANG.JO',
         'WHL.JO',]
 
 for i in stocks:
-    sdata(i)
-'''
+    f = sdata(i)
+    print(f)
