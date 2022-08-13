@@ -1,7 +1,8 @@
 #https://analyzingalpha.com/yfinance-python
 import yfinance as yf
 import streamlit as st
-
+import pandas as pd
+matrix = pd.DataFrame(columns=[])
 def sdata(tic):
   msft = yf.Ticker(tic)
   info = msft.info
