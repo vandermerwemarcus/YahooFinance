@@ -19,7 +19,6 @@ def sdata(tic):
   ER = info['enterpriseToRevenue']
   st.write('Name:',info['shortName'])
   st.write('Ticker:',info['symbol'])
-  
   st.write('Last closing price:',LP)
   st.write('Calculated Price:',PP)
   st.write('EPS:',EPS)
@@ -35,7 +34,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('TBS.JO')
+sdata('NED.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
