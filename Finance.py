@@ -15,9 +15,11 @@ def sdata(tic):
   EPS = info['trailingEps']
   PP = EPS * 20
   LP = info['previousClose']/100
+  EV = info['enterpriseToEbitda']
   st.write('Ticker:',info['symbol'])
   st.write('Name:',info['shortName'])
   st.write('Trailing PE:',PE)
+  st.write('EV/EBITDA:',EV)
   st.write('Forward EPS',FPE)
   st.write('PEG:',PEG)
   st.write('Last closing price:',LP)
@@ -30,7 +32,7 @@ def sdata(tic):
   st.write(info)
   #st.write(info.keys())
 
-sdata('REM.JO')
+sdata('WHL.JO')
 '''
 stocks=['ANG.JO',
         'ACL.JO',
