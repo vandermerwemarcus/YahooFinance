@@ -50,7 +50,12 @@ def sdata(tic):
   
   RR = round(1-K,2)
   g = round(ROE*RR,2)
-  PEG = round(PE/g,2)
+  
+  try:
+    PEG = round(PE/g,2)
+  except ZeroDivisionError:
+    PEG = 0
+    
   PP = round(EPS * 20)
 
   #st.write('Name:',info['shortName'])
