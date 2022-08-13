@@ -10,8 +10,11 @@ def sdata(tic):
   try:
     ROE = round(100*info['returnOnEquity'],2)
   except Keyerror:
-    ROE = null 
-  PE = round(info['trailingPE'],2)
+    ROE = 0
+  try:
+    PE = round(info['trailingPE'],2)
+  except Keyerror:
+    PE = 0
   FPE = info['forwardEps']
   K = round(info['payoutRatio'],2)
   RR = round(1-K,2)
