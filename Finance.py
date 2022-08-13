@@ -15,6 +15,7 @@ def sdata(tic):
     
   try:
     PE = round(info['trailingPE'],2)
+    st.write('PE...',PE)
   except Exception:
     PE = 0
   
