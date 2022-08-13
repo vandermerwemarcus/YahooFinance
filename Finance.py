@@ -46,7 +46,7 @@ def sdata(tic):
   try:
     PE = LP/EPS
   except Exception:
-    PE = null
+    PE = 0
     
   RR = round(1-K,2)
   g = round(ROE*RR,2)
