@@ -10,12 +10,12 @@ def sdata(tic):
   
   try:
     ROE = round(100*info['returnOnEquity'],2)
-  except Keyerror:
+  except Exception:
     ROE = 0
     
   try:
     PE = round(info['trailingPE'],2)
-  except Keyerror:
+  except Exception:
     PE = 0
   
   try:
