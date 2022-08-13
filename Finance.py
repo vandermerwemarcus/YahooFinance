@@ -13,7 +13,7 @@ def sdata(tic):
   g = round(ROE*RR,2)
   PEG = round(PE/g,2)
   EPS = info['trailingEps']
-  PP = EPS * 20
+  PP = round(EPS * 20)
   LP = info['previousClose']/100
   EV = info['enterpriseToEbitda']
   ER = info['enterpriseToRevenue']
